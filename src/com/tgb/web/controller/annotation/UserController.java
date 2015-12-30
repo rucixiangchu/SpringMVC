@@ -7,21 +7,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
-	
-	@RequestMapping(value="/user/addUser",method=RequestMethod.POST)
-	public ModelAndView addUser(){
-		
-		String result ="this is addUser------";
-		return new ModelAndView("/jquery","result",result);
+
+	@RequestMapping(value = "/user/addUser", method = RequestMethod.POST)
+	public ModelAndView addUser() {
+
+		String result = "this is addUser------";
+		return new ModelAndView("/jquery", "result", result);
 	}
-	
-	@RequestMapping(value="/user/delUser",method=RequestMethod.GET)
-	public ModelAndView delUser(){
-		String result ="this is delUser------";
-		return new ModelAndView("/jquery","result",result);
+
+	@RequestMapping(value = "/user/delUser", method = RequestMethod.GET)
+	public ModelAndView delUser() {
+		String result = "this is delUser------";
+		return new ModelAndView("/jquery", "result", result);
 	}
-	@RequestMapping(value="/user/toUser",method=RequestMethod.GET)
-	public ModelAndView toUser(){
+
+	@RequestMapping(value = "/user/toUser", method = RequestMethod.GET)
+	public ModelAndView toUser() {
 		return new ModelAndView("/jquery");
 	}
 }

@@ -8,23 +8,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user2")
 public class User2Controller {
-	
+
 	@RequestMapping("/addUser")
-	public String addUser(HttpServletRequest request){
-		
-		String result ="this is addUser------优化版";
+	public String addUser(HttpServletRequest request) {
+
+		String result = "this is addUser------优化版";
 		request.setAttribute("result", result);
 		return "/jquery";
 	}
-	
+
 	@RequestMapping("/delUser")
-	public String delUser(HttpServletRequest request){
-		String result ="this is delUser------优化版";
+	public String delUser(HttpServletRequest request) {
+		String result = "this is delUser------优化版";
 		request.setAttribute("result", result);
 		return "/jquery";
 	}
+
 	@RequestMapping("/toUser")
-	public String toUser(HttpServletRequest request){
+	public String toUser(HttpServletRequest request) {
 		return "/jquery";
 	}
 }

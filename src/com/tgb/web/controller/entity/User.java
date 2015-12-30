@@ -1,9 +1,9 @@
 package com.tgb.web.controller.entity;
 
 public class User {
-	
+
 	private String userName;
-	
+
 	private String age;
 
 	public String getUserName() {

@@ -13,17 +13,17 @@ public class SpringController {
 
 	/*@Resource(name="springManager")
 	private ISpring springManager;*/
-	
+
 	@RequestMapping("/spring/get")
-	public String get(HttpServletRequest request){
+	public String get(HttpServletRequest request) {
 		//spring的上下文
 		WebApplicationContext ac1 = WebApplicationContextUtils.getWebApplicationContext(request.getSession().getServletContext());
 		//springMVC的上下文
 		WebApplicationContext ac2 = RequestContextUtils.getWebApplicationContext(request);
-		
+
 		//ISpring springManager = (ISpring) ac1.getBean("springManager");
-		ISpring springManager = (ISpring)ac2.getBean("springManager");
-		
+		ISpring springManager = (ISpring) ac2.getBean("springManager");
+
 		System.out.println(springManager.get());
 		return "/success";
 	}
